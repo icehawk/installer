@@ -1,0 +1,25 @@
+{
+	"name": "icehawk/installer",
+	"description": "Installs IceHawk projects by using composer create-project",
+	"type": "metapackage",
+	"require": {
+		"php": ">=7.0",
+		"icehawk/icehawk": "2.0.0-rc5"
+	},
+	"scripts": {
+		"post-root-package-install": "IceHawk\\Installer::postRootPackageInstall"
+	},
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Holger Woltersdorf",
+			"email": "hw@hollo.me"
+		}
+	],
+	"minimum-stability": "dev",
+	"autoload": {
+		"psr-4": {
+			"IceHawk\\": "installer/"
+		}
+	}
+}
