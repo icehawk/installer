@@ -8,18 +8,15 @@ namespace __NS_VENDOR__\__NS_PROJECT__\Application\Responses;
 use IceHawk\IceHawk\Constants\HttpCode;
 
 /**
- * Class Page
+ * Class InternalServerError
  * @package __NS_VENDOR__\__NS_PROJECT__\Application\Responses
  */
-final class Page
+final class InternalServerError
 {
-	public function respond( string $content, int $httpCode = HttpCode::OK )
+	public function respond()
 	{
-		header( 'Content-Type: text/html; charset=utf-8', true, $httpCode );
-
-		# Implement you layout rendering here
-
-		echo '<p>', $content, '</p>';
+		header( 'Content-Type: text/html; charset=utf-8', true, HttpCode::INTERNAL_SERVER_ERROR );
+		echo "500 - Internal Server Error";
 		flush();
 	}
 }
