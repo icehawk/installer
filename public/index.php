@@ -5,9 +5,9 @@
 
 namespace __NS_VENDOR__\__NS_PROJECT__;
 
-use __NS_VENDOR__\__NS_PROJECT__\Application\IceHawkConfig;
-use __NS_VENDOR__\__NS_PROJECT__\Application\IceHawkDelegate;
 use IceHawk\IceHawk\IceHawk;
+
+require(__DIR__ . '/../vendor/autoload.php');
 
 $config      = new IceHawkConfig();
 $delegate    = new IceHawkDelegate();

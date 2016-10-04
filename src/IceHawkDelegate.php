@@ -3,29 +3,29 @@
  * @author __AUTHOR__
  */
 
-namespace __NS_VENDOR__\__NS_PROJECT__\Application;
+namespace __NS_VENDOR__\__NS_PROJECT__;
 
 use IceHawk\IceHawk\Interfaces\ProvidesRequestInfo;
 use IceHawk\IceHawk\Interfaces\SetsUpEnvironment;
 
 /**
  * Class IceHawkDelegate
- * @package __NS_VENDOR__\__NS_PROJECT__\Application
+ * @package __NS_VENDOR__\__NS_PROJECT__
  */
 final class IceHawkDelegate implements SetsUpEnvironment
 {
 	public function setUpGlobalVars()
 	{
-		// TODO: Implement setUpGlobalVars() method.
+		# You can change your global vars like $_SERVER, $_GET, $_POST, etc. here, before IceHawk will use them
 	}
 
 	public function setUpErrorHandling( ProvidesRequestInfo $requestInfo )
 	{
-		// TODO: Implement setUpErrorHandling() method.
+		# PHP's default error handling is used unless you set up something else here.
 	}
 
 	public function setUpSessionHandling( ProvidesRequestInfo $requestInfo )
 	{
-		// TODO: Implement setUpSessionHandling() method.
+		# PHP's default session handling is used unless you set up something else here.
 	}
 }

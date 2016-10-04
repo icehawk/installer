@@ -10,13 +10,13 @@ use IceHawk\IceHawk\Interfaces\HandlesGetRequest;
 use IceHawk\IceHawk\Interfaces\ProvidesReadRequestData;
 
 /**
- * Class ShowHomepageRequestHandler
+ * Class SayHelloRequestHandler
  * @package __NS_VENDOR__\__NS_PROJECT__\Application\Endpoints\Home\Read
  */
-final class ShowHomepageRequestHandler implements HandlesGetRequest
+final class SayHelloRequestHandler implements HandlesGetRequest
 {
 	public function handle( ProvidesReadRequestData $request )
 	{
-		(new Page())->respond( 'This is your homepage.' );
+		(new Page())->respond( 'Hello World!' );
 	}
 }
