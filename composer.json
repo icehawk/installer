@@ -3,7 +3,9 @@
 	"description": "Installs IceHawk projects by using composer create-project",
 	"type": "metapackage",
 	"require": {
-		"php": ">=7.0"
+		"php": ">=7.0",
+		"symfony/console": "2.8.11",
+		"psr/log": "^1.0"
 	},
 	"scripts": {
 		"post-create-project-cmd": "IceHawk\\Installer::postCreateProject"
