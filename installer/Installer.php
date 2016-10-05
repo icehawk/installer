@@ -10,7 +10,7 @@ use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
-require(__DIR__ . '/vendor/autoload.php');
+require(__DIR__ . '/../vendor/autoload.php');
 
 /**
  * Class Installer
@@ -18,17 +18,13 @@ require(__DIR__ . '/vendor/autoload.php');
  */
 final class Installer
 {
-	public static function postRootPackageInstall()
+	public static function postCreateProject()
 	{
 		try
 		{
 			$app = new Application( 'IceHawk Installer', '1.0' );
-
 			$app->add( new InstallInteractive( 'install:interactive' ) );
-
-			$exitCode = $app->find( 'install:interactive' )->run( new ArgvInput(), new ConsoleOutput() );
-
-			exit($exitCode);
+			$app->find( 'install:interactive' )->run( new ArgvInput(), new ConsoleOutput() );
 		}
 		catch ( \Throwable $e )
 		{
