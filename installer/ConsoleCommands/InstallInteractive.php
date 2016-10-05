@@ -199,7 +199,7 @@ final class InstallInteractive extends Command
 
 	private function selfDestruct()
 	{
-		//$installerDir = escapeshellarg( realpath( __DIR__ . '/../' ) );
-		//shell_exec( 'rm -rf ' . $installerDir );
+		$installerDir = escapeshellarg( realpath( __DIR__ . '/../' ) );
+		shell_exec( 'rm -rf ' . $installerDir );
 	}
 }
