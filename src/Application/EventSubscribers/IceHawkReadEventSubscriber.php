@@ -15,6 +15,9 @@ use IceHawk\IceHawk\PubSub\AbstractEventSubscriber;
  */
 final class IceHawkReadEventSubscriber extends AbstractEventSubscriber
 {
+	/** @var float */
+	private $startTime;
+
 	protected function getAcceptedEvents() : array
 	{
 		return [
@@ -25,11 +28,12 @@ final class IceHawkReadEventSubscriber extends AbstractEventSubscriber
 
 	public function whenHandlingReadRequest( HandlingReadRequestEvent $event )
 	{
-		echo "Listen, will handle the read request {$event->getRequestInfo()->getUri()} now...";
+		$this->startTime = microtime( true );
 	}
 
 	public function whenReadRequestWasHandled( ReadRequestWasHandledEvent $event )
 	{
-		echo "Listen, the read request {$event->getRequestInfo()->getUri()} was handled.";
+		echo "The request on {$event->getRequestInfo()->getUri()} was handled in "
+		     . (microtime( true ) - $this->startTime) . " seconds.";
 	}
 }
