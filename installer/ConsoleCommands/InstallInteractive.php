@@ -64,8 +64,8 @@ final class InstallInteractive extends Command
 		$style->table(
 			[],
 			[
-				['Your namespace', $replacements['__NS_VENDOR__'] . '\\' . $replacements['__NS_PROJECT__']],
-				['Author name', $replacements['__AUTHOR__']],
+				[ 'Your namespace', $replacements['__NS_VENDOR__'] . '\\' . $replacements['__NS_PROJECT__'] ],
+				[ 'Author name', $replacements['__AUTHOR__'] ],
 				[
 					'Additional components',
 					(!empty($componentsToInstall) ? join( ', ', array_keys( $componentsToInstall ) ) : 'none'),
@@ -75,7 +75,7 @@ final class InstallInteractive extends Command
 
 		$installNow = $style->choice(
 			'All settings correct?',
-			['Yes', 'Change settings', 'Cancel installation'],
+			[ 'Yes', 'Change settings', 'Cancel installation' ],
 			'Yes'
 		);
 
@@ -85,6 +85,7 @@ final class InstallInteractive extends Command
 			{
 				$style->success( 'Installing your IceHawk project now.' );
 
+				$this->replaceValuesInFiles( $replacements, __DIR__ . '/../../src' );
 				$this->installComponents( array_keys( $componentsToInstall ) );
 				$this->removeComponents( array_keys( $componentsToRemove ) );
 
@@ -109,6 +110,25 @@ final class InstallInteractive extends Command
 		}
 
 		return 0;
+	}
+
+	private function replaceValuesInFiles( array $replacements, string $baseDir )
+	{
+		$dir      = new \RecursiveDirectoryIterator( $baseDir, \FilesystemIterator::SKIP_DOTS );
+		$iterator = new \RecursiveIteratorIterator( $dir );
+
+		/** @var \SplFileInfo $item */
+		foreach ( $iterator as $item )
+		{
+			if ( !$item->isFile() )
+			{
+				continue;
+			}
+
+			$content = file_get_contents( $item->getPathname() );
+			str_replace( array_keys( $replacements ), array_values( $replacements ), $content );
+			file_put_contents( $item->getPathname(), $content );
+		}
 	}
 
 	private function installComponents( array $components )
