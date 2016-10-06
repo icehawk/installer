@@ -25,10 +25,14 @@ final class FinalReadResponder implements RespondsFinallyToReadRequest
 		}
 		catch ( UnresolvedRequest $e )
 		{
+			# No matching route was found, respond with a 404 Not Found
+
 			(new NotFound())->respond();
 		}
 		catch ( \Throwable $e )
 		{
+			# Something else went wrong, respond with a 500 Internal Server Error
+
 			(new InternalServerError())->respond();
 		}
 	}

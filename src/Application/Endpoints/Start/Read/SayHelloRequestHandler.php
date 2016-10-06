@@ -17,6 +17,10 @@ final class SayHelloRequestHandler implements HandlesGetRequest
 {
 	public function handle( ProvidesReadRequestData $request )
 	{
-		(new Page())->respond( 'Hello World!' );
+		# This method handles a GET (and HEAD) request
+
+		# And responds with a 200 OK and page content
+
+		(new Page())->respond( file_get_contents( __DIR__ . '/Pages/hello.html' ) );
 	}
 }

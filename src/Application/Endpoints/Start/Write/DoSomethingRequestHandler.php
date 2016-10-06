@@ -17,10 +17,10 @@ final class DoSomethingRequestHandler implements HandlesPostRequest
 {
 	public function handle( ProvidesWriteRequestData $request )
 	{
-		# Do something with your data here
+		# This method handles a post request
 
-		$number = $request->getInput()->get( 'number' );
+		# And responds with a 301 redirect back to /
 
-		(new Redirect( "/show/{$number}" ))->respond();
+		(new Redirect( "/" ))->respond();
 	}
 }
