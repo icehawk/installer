@@ -1,3 +1,5 @@
+![IceHawk Framework](https://icehawk.github.io/images/Logo-Flying-Tail-White.png)
+
 # IceHawk Installer
 
 Installs new IceHawk projects by using `composer create-project`
@@ -23,7 +25,7 @@ cd /path/to/new-project/public
 php -S 127.0.0.1:8088
 ```
 
-Visit in you browser: http://127.0.0.1:8088/
+Visit in your browser: http://127.0.0.1:8088/
 
 **Please note:** You need to replace `127.0.0.1` with your machine's IP address, if you're not on your local host.
 
