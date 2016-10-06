@@ -3,7 +3,7 @@
  * @author __AUTHOR__
  */
 
-namespace __NS_VENDOR__\__NS_PROJECT__\Application\Endpoints\Home\Read;
+namespace __NS_VENDOR__\__NS_PROJECT__\Application\Endpoints\Start\Read;
 
 use __NS_VENDOR__\__NS_PROJECT__\Application\Responses\Page;
 use IceHawk\IceHawk\Interfaces\HandlesGetRequest;
@@ -11,7 +11,7 @@ use IceHawk\IceHawk\Interfaces\ProvidesReadRequestData;
 
 /**
  * Class SayHelloRequestHandler
- * @package __NS_VENDOR__\__NS_PROJECT__\Application\Endpoints\Home\Read
+ * @package __NS_VENDOR__\__NS_PROJECT__\Application\Endpoints\Start\Read
  */
 final class SayHelloRequestHandler implements HandlesGetRequest
 {

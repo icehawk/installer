@@ -7,6 +7,9 @@
 		"symfony/console": "2.8.11",
 		"psr/log": "^1.0"
 	},
+	"require-dev": {
+		"icehawk/icehawk": "2.0.0-rc5"
+	},
 	"scripts": {
 		"post-create-project-cmd": "IceHawk\\Installer\\Installer::postCreateProject"
 	},
