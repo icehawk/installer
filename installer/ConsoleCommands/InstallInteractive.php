@@ -78,10 +78,10 @@ final class InstallInteractive extends Command
 		$style->table(
 			[],
 			[
-				[ 'Your namespace', $replacements['__NS_VENDOR__'] . '\\' . $replacements['__NS_PROJECT__'] ],
-				[ 'Your package', $replacements['__PACKAGE_NAME__'] ],
-				[ 'Author name', $replacements['__AUTHOR_NAME__'] ],
-				[ 'Author email', $replacements['__AUTHOR_EMAIL__'] ],
+				['Your namespace', $replacements['__NS_VENDOR__'] . '\\' . $replacements['__NS_PROJECT__']],
+				['Your package', $replacements['__PACKAGE_NAME__']],
+				['Author name', $replacements['__AUTHOR_NAME__']],
+				['Author email', $replacements['__AUTHOR_EMAIL__']],
 				[
 					'Additional components',
 					(!empty($componentsToInstall) ? join( ', ', array_slice( $componentsToInstall, 1 ) ) : 'none'),
@@ -91,7 +91,7 @@ final class InstallInteractive extends Command
 
 		$installNow = $style->choice(
 			'All settings correct?',
-			[ 'Yes', 'Change settings', 'Cancel installation' ],
+			['Yes', 'Change settings', 'Cancel installation'],
 			'Yes'
 		);
 
@@ -116,6 +116,9 @@ final class InstallInteractive extends Command
 				$this->selfDestruct();
 
 				$style->success( 'Your project was installed.' );
+				$style->text( '' );
+				$style->text( "Now point your webserver's document root to " . realpath( __DIR__ . '/../../public' ) );
+				$style->text( '' );
 				$style->text( 'Thank you for using the IceHawk framework.' );
 				$style->text( 'Please report installer issues at https://github.com/icehawk/installer/issues' );
 
@@ -203,7 +206,7 @@ final class InstallInteractive extends Command
 	private function selfDestruct()
 	{
 		$installerDir = escapeshellarg( realpath( __DIR__ . '/../' ) );
-		
+
 		shell_exec( 'rm -rf ' . $installerDir );
 	}
 }
