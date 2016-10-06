@@ -3,7 +3,7 @@
  * @author hollodotme
  */
 
-namespace IceHawk;
+namespace IceHawk\Installer;
 
 use IceHawk\Installer\ConsoleCommands\InstallInteractive;
 use Symfony\Component\Console\Application;
@@ -14,7 +14,7 @@ require(__DIR__ . '/../vendor/autoload.php');
 
 /**
  * Class Installer
- * @package IceHawk
+ * @package IceHawk\Installer
  */
 final class Installer
 {
@@ -24,7 +24,7 @@ final class Installer
 		{
 			$app = new Application( 'IceHawk Installer', '1.0' );
 			$app->add( new InstallInteractive( 'install:interactive' ) );
-			$app->find( 'install:interactive' )->run( new ArgvInput(), new ConsoleOutput() );
+			$app->find( 'install:interactive' )->run( new ArgvInput( [] ), new ConsoleOutput() );
 		}
 		catch ( \Throwable $e )
 		{
@@ -35,4 +35,3 @@ final class Installer
 		}
 	}
 }
-

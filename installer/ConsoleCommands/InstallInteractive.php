@@ -108,6 +108,9 @@ final class InstallInteractive extends Command
 
 				@unlink( __DIR__ . '/../../composer.lock' );
 				@unlink( __DIR__ . '/../../Vagrantfile' );
+				@unlink( __DIR__ . '/../../LICENSE' );
+				@unlink( __DIR__ . '/../../README.md' );
+				@unlink( __DIR__ . '/../../CHANGELOG.md' );
 
 				$this->installComponents();
 				$this->selfDestruct();
@@ -200,6 +203,7 @@ final class InstallInteractive extends Command
 	private function selfDestruct()
 	{
 		$installerDir = escapeshellarg( realpath( __DIR__ . '/../' ) );
+		
 		shell_exec( 'rm -rf ' . $installerDir );
 	}
 }

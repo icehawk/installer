@@ -8,7 +8,7 @@
 		"psr/log": "^1.0"
 	},
 	"scripts": {
-		"post-create-project-cmd": "IceHawk\\Installer::postCreateProject"
+		"post-create-project-cmd": "IceHawk\\Installer\\Installer::postCreateProject"
 	},
 	"license": "MIT",
 	"authors": [
@@ -20,8 +20,7 @@
 	"minimum-stability": "dev",
 	"autoload": {
 		"psr-4": {
-			"IceHawk\\": "installer/",
-			"IceHawk\\Installer\\ConsoleCommands\\": "installer/ConsoleCommands/"
+			"IceHawk\\Installer\\": "installer/"
 		}
 	}
 }
