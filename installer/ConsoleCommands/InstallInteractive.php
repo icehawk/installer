@@ -112,12 +112,14 @@ final class InstallInteractive extends Command
 				@unlink( __DIR__ . '/../../README.md' );
 				@unlink( __DIR__ . '/../../CHANGELOG.md' );
 
+				$docRoot = realpath( __DIR__ . '/../../public' );
+
 				$this->installComponents();
 				$this->selfDestruct();
 
 				$style->success( 'Your project was installed.' );
 				$style->text( '' );
-				$style->text( "Now point your webserver's document root to " . realpath( __DIR__ . '/../../public' ) );
+				$style->text( "Now point your webserver's document root to " . $docRoot );
 				$style->text( '' );
 				$style->text( 'Thank you for using the IceHawk framework.' );
 				$style->text( 'Please report installer issues at https://github.com/icehawk/installer/issues' );
