@@ -20,7 +20,8 @@
 	"minimum-stability": "dev",
 	"autoload": {
 		"psr-4": {
-			"IceHawk\\": "installer/"
+			"IceHawk\\": "installer/",
+			"IceHawk\\Installer\\ConsoleCommands\\": "installer/ConsoleCommands/"
 		}
 	}
 }
