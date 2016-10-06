@@ -121,8 +121,8 @@ final class InstallInteractive extends Command
 				$style->text( '' );
 				$style->text( "Now point your webserver's document root to " . $docRoot );
 				$style->text( '' );
-				$style->text( 'Thank you for using the IceHawk framework.' );
 				$style->text( 'Please report installer issues at https://github.com/icehawk/installer/issues' );
+				$style->note( 'Thank you for using the IceHawk framework.' );
 
 				break;
 			}
