@@ -29,8 +29,4 @@ Visit in your browser: http://127.0.0.1:8088/
 
 **Please note:** You need to replace `127.0.0.1` with your machine's IP address, if you're not on your local host.
 
-You should see something like this:
-
-> Hello World!
-> 
-> The request on / was handled in 0.00032591819763184 seconds.
+You should see a welcome page.
