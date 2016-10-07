@@ -25,10 +25,10 @@ final class InstallInteractive extends Command
 	const COMP_PUBSUB           = 'icehawk/pubsub';
 
 	const COMPONENT_VERSION_MAP = [
-		self::COMP_ICEHAWK => '2.0.0-rc5',
-		self::COMP_FORMS   => '1.0.0-rc4',
+		self::COMP_ICEHAWK => '^2.0',
+		self::COMP_FORMS   => '^1.0',
 		self::COMP_PUBSUB  => '^1.0',
-		self::COMP_SESSION => '^1.0',
+		self::COMP_SESSION => '^1.1',
 	];
 
 	protected function execute( InputInterface $input, OutputInterface $output )
