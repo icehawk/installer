@@ -19,7 +19,7 @@ final class Page
 
 		# Implement you layout rendering here
 
-		echo '<p>', $content, '</p>';
+		echo $content;
 		flush();
 	}
 }
