@@ -12,6 +12,8 @@ use __NS_VENDOR__\__NS_PROJECT__\Application\EventSubscribers\IceHawkReadEventSu
 use __NS_VENDOR__\__NS_PROJECT__\Application\EventSubscribers\IceHawkWriteEventSubscriber;
 use __NS_VENDOR__\__NS_PROJECT__\Application\FinalResponders\FinalReadResponder;
 use __NS_VENDOR__\__NS_PROJECT__\Application\FinalResponders\FinalWriteResponder;
+use IceHawk\IceHawk\Defaults\Traits\DefaultCookieProviding;
+use IceHawk\IceHawk\Defaults\Traits\DefaultRequestBypassing;
 use IceHawk\IceHawk\Defaults\Traits\DefaultRequestInfoProviding;
 use IceHawk\IceHawk\Interfaces\ConfiguresIceHawk;
 use IceHawk\IceHawk\Interfaces\RespondsFinallyToReadRequest;
@@ -27,6 +29,8 @@ use IceHawk\IceHawk\Routing\WriteRoute;
 final class IceHawkConfig implements ConfiguresIceHawk
 {
 	use DefaultRequestInfoProviding;
+	use DefaultCookieProviding;
+	use DefaultRequestBypassing;
 
 	public function getReadRoutes()
 	{

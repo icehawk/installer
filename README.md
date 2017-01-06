@@ -22,7 +22,8 @@ composer create-project icehawk/installer /path/to/new-project
 
 You will be asked questions regarding your desired installation.
 
-**Please note:** For reasons of automation the installer initially installs some thrid-party dependencies. These will be removed at the end of the installation process.
+**Please note:** For reasons of automation the installer initially installs some thrid-party dependencies. 
+These will be removed at the end of the installation process.
 
 ## Quick installation check
 
