@@ -4,11 +4,13 @@
 	"type": "project",
 	"require": {
 		"php": ">=7.0",
-		"symfony/console": "^2.8",
+		"symfony/console": "^3.0",
 		"psr/log": "^1.0"
 	},
 	"scripts": {
-		"post-create-project-cmd": "IceHawk\\Installer\\Installer::postCreateProject"
+		"post-create-project-cmd": [
+			"@php installer/install.php"
+		]
 	},
 	"license": "MIT",
 	"authors": [
