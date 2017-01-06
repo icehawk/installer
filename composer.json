@@ -8,9 +8,7 @@
 		"psr/log": "^1.0"
 	},
 	"scripts": {
-		"post-create-project-cmd": [
-			"@php installer/install.php"
-		]
+		"post-create-project-cmd": "IceHawk\\Installer\\Installer::postCreateProject"
 	},
 	"license": "MIT",
 	"authors": [
