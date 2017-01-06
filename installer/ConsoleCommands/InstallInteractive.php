@@ -115,7 +115,6 @@ final class InstallInteractive extends Command
 				$this->replaceValuesInFiles( $replacements, __DIR__ . '/../../src' );
 
 				@unlink( __DIR__ . '/../../composer.lock' );
-				@unlink( __DIR__ . '/../../Vagrantfile' );
 				@unlink( __DIR__ . '/../../LICENSE' );
 				@unlink( __DIR__ . '/../../README.md' );
 				@unlink( __DIR__ . '/../../CHANGELOG.md' );
