@@ -18,7 +18,7 @@ You can optionally choose to install one ore more of the IceHawk components:
 Run command:
 
 ```bash
-composer create-project icehawk/installer /path/to/new-project
+composer create-project icehawk/installer /path/to/new-project -n
 ```
 
 You will be asked questions regarding your desired installation.

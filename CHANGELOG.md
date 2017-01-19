@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a CHANGELOG](http://keepachangelog.com).
 
+## [1.3.1] - 2017-01-19
+
+- Fixed 3rd-party composer dependency versions
+
 ## [1.3.0] - 2017-01-06
 
 ### Changed
@@ -36,6 +40,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a CH
 
 - First release
 
+[1.3.1]: https://github.com/icehawk/installer/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/icehawk/installer/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/icehawk/installer/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/icehawk/installer/compare/v1.0.0...v1.1.0
