@@ -33,7 +33,7 @@ final class InstallInteractive extends Command
 	const COMP_PUBSUB           = 'icehawk/pubsub';
 
 	const COMPONENT_VERSION_MAP = [
-		self::COMP_ICEHAWK => '^2.1',
+		self::COMP_ICEHAWK => '^2.2',
 		self::COMP_FORMS   => '^1.0',
 		self::COMP_PUBSUB  => '^1.0',
 		self::COMP_SESSION => '^1.1',
